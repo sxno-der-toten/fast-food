@@ -1,0 +1,46 @@
+header {
+    background-color: black;
+    color: #ecf0f1;
+    padding: 10px;
+    text-align: center;
+}
+
+.logo {
+    width: 30px;
+    height: auto;
+}
+
+nav {
+    background-color: white;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin: 0;
+    padding: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+nav a:hover {
+    background-color: black;
+    color: #fff;
+}
+
+footer {
+    background-color: black;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 10px;
+}
