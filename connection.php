@@ -3,11 +3,11 @@
 $system_info = php_uname();
 
 if (strpos($system_info, 'Windows') !== false) {
-    $dsn = 'mysql:host=localhost;dbname=fastfood;charset=utf8';
+    $dsn = 'mysql:host=localhost;dbname=fast-food;charset=utf8';
     $username = 'root';
     $password = '';
 } else {
-    $dsn = 'mysql:host=localhost;dbname=fastfood;charset=utf8;port=8889';
+    $dsn = 'mysql:host=localhost;dbname=fast-food;charset=utf8;port=8889';
     $username = 'root';
     $password = 'root';
 }

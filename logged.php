@@ -6,6 +6,6 @@
     <title>Document</title>
 </head>
 <body>
-    <?php include 'layout.html'; ?>
+    <h1>Connecté</h1>
 </body>
 </html>
