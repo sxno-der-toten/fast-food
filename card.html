@@ -3,14 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="card.css">
-    <title>Pizza Margherita</title>
+    <title>La délicieuse Pizza</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 20px;
+        }
+
+        .pizza-card {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 15px;
+            max-width: 300px;
+            margin: 30px auto 0;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .pizza-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        h2 {
+            color: #ff5733;
+        }
+
+        .price {
+            color: white;
+        }
+
+        .L {
+            color : white;
+        }
+    </style>
 </head>
 <body>
-    <div class="card">
-        <img class="avatar" src="assets/images/pizza peperoni.png" alt="Profile Picture">
-        <h1>Pizza Margherita</h1>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus magnam vel ratione dolor ut possimus illo?</p>
+
+    <div class="pizza-card">
+        <img class="pizza-image" src="assets/images/pizza peperoni.png" alt="Délicieuse Pizza">
+        <h2>Pizza Pepperoni</h2>
+        <p class="L">Une pizza classique avec une croûte fine, de la sauce tomate, de la mozzarella fraîche et du basilic.</p>
+        <p class="L"><strong>Ingrédients :</strong> Croûte, sauce tomate, mozzarella, basilic.</p>
+        <p class ="price"><strong>10,99 €</strong></p>
     </div>
+
 </body>
 </html>

@@ -4,14 +4,28 @@ body {
 }
 
 .bandeau {
-    background-color: #333;
+    background-color: #242935;
     overflow: hidden;
 }
 
 .bandeau a {
     float: right;
     display: block;
-    color: #f2f2f2;
+    color: #242935;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.bas {
+    background-color: #242935;
+    overflow: hidden;
+}
+
+.bas a {
+    float: right;
+    display: block;
+    color: #242935;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
