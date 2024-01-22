@@ -10,6 +10,7 @@ if (session_status() === PHP_SESSION_ACTIVE) {
 session_unset();
 
 require 'connection.php';
+include '../../../login.php';
 function validationEmail($email)
 {
     return filter_var($email, FILTER_VALIDATE_EMAIL);
