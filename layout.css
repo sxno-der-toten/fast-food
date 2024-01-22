@@ -11,6 +11,7 @@ body {
 .bandeau a {
     float: right;
     display: block;
+    position: fixed;
     color: #242935;
     text-align: center;
     padding: 14px 16px;
@@ -20,11 +21,15 @@ body {
 .bas {
     background-color: #242935;
     overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
 }
 
 .bas a {
-    float: right;
-    display: block;
+    display: inline-block;
     color: #242935;
     text-align: center;
     padding: 14px 16px;
@@ -35,6 +40,6 @@ body {
     display: block;
     margin-left: 25px;
     margin-right: auto;
-    width: 30px; 
+    width: 30px;
     padding: 10px 0;
 }
