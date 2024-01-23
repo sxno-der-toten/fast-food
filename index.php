@@ -3,18 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="index.css">
-    <title>Document</title>
+    <title>Street Food</title>
+    <style>
+        body { overflow :auto; }
+    </style>
 </head>
 <body>
-    <?php include 'header.html'; ?>
-
-    <div class="background-rectangle"></div>
-
-    <section class="rass">
-        <div class="background"></div>
-        <?php include 'card.html'; ?>
-    </section>
-    <?php include 'footer.html'; ?>
+    <?php include 'header.php'; ?>
+        <?php include 'card.php'; ?>
+    <?php include 'footer.php'; ?>
 </body>
 </html>
