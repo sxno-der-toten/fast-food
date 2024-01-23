@@ -1,46 +1,49 @@
 .logout-form {
-    background-color: #fff; /* White background */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle elevation effect */
+    background-color: #fff; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
     border-radius: 8px;
     text-align: center;
-    margin: auto; /* Center the form horizontally */
-    max-width: 400px; /* Set a maximum width to the form */
+    margin: auto; 
+    max-width: 400px;
 }
 
 h2 {
-    color: #343a40; /* Dark text color */
+    color: #343a40; 
     margin-bottom: 10px;
 }
 
 p {
-    color: #6c757d; /* Gray text color */
+    color: #6c757d; 
     margin-bottom: 20px;
 }
 
 .logout {
-    background-color: #dc3545; /* Red color */
-    color: #fff; /* Text color */
+    background-color: #dc3545; 
+    color: #fff;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-    margin-right: 10px; /* Add margin to separate from the link */
+    margin-right: 10px;
 }
 
-/* Add hover effect */
 .logout:hover {
-    background-color: #c82333; /* Darker red on hover */
+    background-color: #c82333;
 }
 
 a {
     text-decoration: none;
-    color: #007bff; /* Blue link color */
+    color: #007bff; 
     font-size: 14px;
+    margin-top: 10px;
 }
 
-/* Add hover effect for the link */
 a:hover {
     text-decoration: underline;
+}
+
+.non {
+    margin-top: 50px;
 }

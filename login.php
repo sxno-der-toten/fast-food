@@ -18,18 +18,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (!empty($email) && !empty($password) && validationEmail($email) && strlen($password) >= 8) {
         try {
-            // Check if the email and password match a registered user
             $stmt = $bdd->prepare("SELECT * FROM login WHERE email = :email");
             $stmt->bindParam(':email', $email);
             $stmt->execute();
             $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
             if ($user && password_verify($password, $user['password'])) {
+                $is_admin = $user['is_admin'];
+            
                 $_SESSION['nickname'] = $user['nickname'];
                 $_SESSION['email'] = $user['email'];
-
-                header("Location: index.php");
-                exit();
+            
+                if ($is_admin === 0) {
+                    header("Location: index.php");
+                    exit();
+                } elseif ($is_admin === 1) {
+                    header("Location: index.php");
+                    exit();
+                }
             } else {
                 echo 'Identifiants incorrects.';
             }

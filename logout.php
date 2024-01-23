@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['confirm_logout'])) {
         <form method="post" action="">
             <input class="logout" type="submit" name="confirm_logout" value="Oui, je suis sûr">
         </form>
-        <a href="index.php">Annuler</a>
+        <a class="non" href="index.php">Annuler</a>
     </div>
     <?php include 'footer.php'; ?>
 </body>

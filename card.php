@@ -22,6 +22,7 @@
             <p class="L">Découvrez la Pizza Bœuf, une création délicieuse qui allie une croûte fine, une sauce tomate riche, de la mozzarella fraîche, et une généreuse portion de bœuf savoureux. L'harmonie parfaite de textures et de saveurs vous transportera dans une aventure culinaire. Les amateurs de viande adoreront chaque bouchée de cette pizza unique.</p>
             <p class="L"><i><strong>Ingrédients :</strong>Viande de boeuf, sauce tomate, fromage mozzarella</i></p>
             <p class="price"><strong>11,99 €</strong></p>
+            <button id="ajouterAuPanierBtn">Ajouter au Panier</button>
         </div>
 
         <div class="column">
@@ -32,5 +33,6 @@
             <p class="price"><strong>12,99 €</strong></p>
         </div>
     </div>
+    <script src="index.js"></script>
 </body>
 </html>
