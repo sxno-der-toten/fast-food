@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['confirm_logout'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="logout.css">
     <title>Déconnexion</title>
 </head>
 <body>
@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['confirm_logout'])) {
         <h2>Confirmation de déconnexion</h2>
         <p>Êtes-vous sûr de vouloir vous déconnecter?</p>
         <form method="post" action="">
-            <input type="submit" name="confirm_logout" value="Oui, je suis sûr">
+            <input class="logout" type="submit" name="confirm_logout" value="Oui, je suis sûr">
         </form>
         <a href="index.php">Annuler</a>
     </div>

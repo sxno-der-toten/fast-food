@@ -1,16 +1,12 @@
 <?php
-if (session_status() === PHP_SESSION_NONE) {
-    session_start();
-}
-
-if (session_status() === PHP_SESSION_ACTIVE) {
-    session_destroy();
-}
-
-session_unset();
 
 require 'connection.php';
-// include 'login.php';
+
+session_unset();
+session_start();
+
+error_reporting(E_ALL);
+
 function validationEmail($email)
 {
     return filter_var($email, FILTER_VALIDATE_EMAIL);
@@ -18,51 +14,37 @@ function validationEmail($email)
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'];
-    $password = isset($_POST['password']) ? $_POST['password'] : '';
+    $password = $_POST['password'];
 
-    if (!empty($email) && !empty($password)) {
-        if (validationEmail($email) && strlen($password) >= 8) {
-            try {
-                $stmt = $bdd->prepare("SELECT email, password FROM login WHERE email = :email");
-                $stmt->bindParam(':email', $email);
-                $stmt->execute();
-                $user = $stmt->fetch(PDO::FETCH_ASSOC);
+    if (!empty($email) && !empty($password) && validationEmail($email) && strlen($password) >= 8) {
+        try {
+            // Check if the email and password match a registered user
+            $stmt = $bdd->prepare("SELECT * FROM login WHERE email = :email");
+            $stmt->bindParam(':email', $email);
+            $stmt->execute();
+            $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
-                if ($user) {
-                    if (isset($user['password']) && password_verify($password, $user['password'])) {
-                        // Password is correct
-                        $stmt = $bdd->prepare("SELECT email FROM login WHERE email = :email");
-                        $stmt->bindParam(':email', $email);
-                        $stmt->execute();
-                        $userData = $stmt->fetch(PDO::FETCH_ASSOC);
+            if ($user && password_verify($password, $user['password'])) {
+                $_SESSION['nickname'] = $user['nickname'];
+                $_SESSION['email'] = $user['email'];
 
-                        if ($userData) {
-                            $_SESSION['email'] = $userData['email'];
-                            header('Location: index.php');
-                            exit();
-                        // } else {
-                        //     $_SESSION['email'] = $email;
-                        //     $_SESSION['islog'] = true;
-                        }
-                    } else {
-                        echo "Le mot de passe est incorrect.";
-                        var_dump($user['password']);
-                        var_dump(password_hash($password, PASSWORD_DEFAULT));
-                    }
-                } else {
-                    echo "L'email n'est pas enregistré.";
-                }
-            } catch (PDOException $e) {
-                echo "Erreur : " . $e->getMessage();
+                header("Location: index.php");
+                exit();
+            } else {
+                echo 'Identifiants incorrects.';
             }
-        } else {
-            echo "L'email n'est pas valide ou le mot de passe doit contenir au moins 8 caractères.";
+        } catch (PDOException $e) {
+            echo "Erreur : " . $e->getMessage();
         }
     } else {
-        echo "Les champs email et password ne peuvent pas être vides.";
+        echo 'Email invalide ou mot de passe trop court (minimum 8 caractères).';
     }
 }
 
+if (isset($_SESSION['nickname'])) {
+    header("Location: index.php");
+    exit();
+}
 ?>
 
 <!DOCTYPE html>
@@ -71,7 +53,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" type="text/css" href="registe.css">
+    <link rel="stylesheet" type="text/css" href="register.css">
 </head>
 <body>
     <div class="background">
@@ -81,14 +63,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <form method="POST" action="login.php">
         <h3>Connexion</h3>
 
-        <label for="email">Nom d'utilisateur</label>
+        <label for="email">Email</label>
         <input type="text" placeholder="Email or Phone" id="email" name="email"> 
 
         <label for="password">Mot de passe</label>
         <input type="password" placeholder="Password" id="password" name="password"> 
 
         <button type="submit" class="log">OK</button>
-        <a href="homepage.php" class="retour">Retour</a>
+        <a href="index.php" class="retour">Retour</a>
         
     </form>
 

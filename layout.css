@@ -22,6 +22,9 @@ body {
     background-color: #242935;
     overflow: hidden;
     text-align: center;
+    position: fixed;
+    bottom: 0; 
+    width: 100%;
 }
 
 .bas a {
