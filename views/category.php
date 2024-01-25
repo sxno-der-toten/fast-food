@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La délicieuse Pizza</title>
-    <link rel="stylesheet" href="card.css">
-</head>
-<body>
-    <div class="row">
+<div class="row">
         <div class="column">
             <img class="pizza-image" src="assets/images/pizza peperoni.png" alt="">
             <h2>Pizza Pepperoni</h2>
@@ -34,5 +25,3 @@
         </div>
     </div>
     <script src="index.js"></script>
-</body>
-</html>
