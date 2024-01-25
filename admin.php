@@ -17,9 +17,9 @@ include 'header.php';
 
     <!-- Add buttons for Commands, Charts, and Products -->
     <div>
-        <button class='commandes' onclick="window.location.href='admin_commands.php'">Commandes</button>
-        <button class='graphiques' onclick="window.location.href='admin_graphs.php'">Graphiques</button>
-        <button class='produits' onclick="window.location.href='admin_products.php'">Produits</button>
+        <button class='commandes' onclick="window.location.href='commandes.php'">Commandes</button>
+        <button class='graphiques' onclick="window.location.href='graphs.php'">Graphiques</button>
+        <button class='produits' onclick="window.location.href='produits.php'">Produits</button>
     </div>
 
 <?php include 'footer.php'; ?>
