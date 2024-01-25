@@ -2,7 +2,7 @@
 session_start();
 require 'include/connection.php';
 
-$availableRoutes = ['homepage', 'category'];
+$availableRoutes = ['homepage', 'category', 'newingr', 'newprod'];
 
 $route = 'homepage';
 if (isset($_GET['page']) && in_array($_GET['page'], $availableRoutes)) {
