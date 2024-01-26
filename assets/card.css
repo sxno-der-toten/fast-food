@@ -26,17 +26,20 @@ body {
 }
 
 .pizza-image {
-    max-width: 100%;
+    max-width: 70%;
     height: auto;
     border-radius: 8px;
 }
 
 h2 {
-    color: #ff5733;
+    color: #ff2f00;
 }
 
 .price, .L {
-    color: white;
+    text-align: left;
+    font-size: medium;
+    max-width: 75%;
+    color: rgb(0, 0, 0);
 }
 
 .pizza-image {
@@ -45,9 +48,31 @@ h2 {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     padding: 5px; /* Ajustez le padding pour réduire l'espace intérieur */
     text-align: center;
-    background-color: #f1f1f1;
+    background-color: #000000;
 }
 
+.elt {
+    text-align: center; /* Centre le contenu horizontalement */
+}
+
+.retour {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin: 15px auto; /* Ajout d'une marge pour centrer verticalement */
+}
+
+.retour:hover {
+    background-color: #45a049;
+}
+
+
+  
+  
 @media screen and (min-width: 768px) {
     .column {
         width: 48%;

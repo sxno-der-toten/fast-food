@@ -1,6 +1,6 @@
 let nombreArticleElement = document.getElementById('nombreArticle');
 let nombreArticle = 0;
-
+/*
 let pepperoni = document.getElementById('pepperoni');
 let boeuf = document.getElementById('boeuf');
 let chorizo = document.getElementById('chorizo');
@@ -37,8 +37,9 @@ chevremiel.onclick = function(event) {
 steak.onclick = function(event) {
     addPanier();
 }
-
-function addPanier() {
+*/
+function addPanier(id) {
+    console.log(id);
     nombreArticle += 1;
     nombreArticleElement.innerHTML = nombreArticle;
 

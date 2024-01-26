@@ -1,7 +1,7 @@
-<link rel="stylesheet" type="text/css" href="new.css">
+<link rel="stylesheet" type="text/css" href="./assets/new.css">
 <title>Ajouter Produit</title>
 <h2>Ajouter un Produit</h2>
-<form action="" method="post">
+<form action="" method="post" enctype="multipart/form-data">
     <label for="name">Nom </label>
     <input type="text" id="name" name="name" required><br>
 
@@ -11,11 +11,14 @@
         <option value="2">Burger</option>
     </select><br>
 
+    <label for="description">Description </label>
+    <textarea id="description" name="description" required></textarea><br>
+
     <label for="price">Prix </label>
     <input type="number" id="price" name="price" required><br>
 
     <label for="image_url">Image_url </label>
-    <input type="text" id="image_url" name="image_url" required><br>
+    <input type="file" id="image_url" name="image_url" required><br>
 
     <label for="purchase_price">Prix d'achat </label>
     <input type="number" id="purchase_price" name="purchase_price" required><br>

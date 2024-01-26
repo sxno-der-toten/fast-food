@@ -55,8 +55,8 @@ body {
 .bas {
     background-color: #242935;
     overflow: hidden;
+    position: absolute;
     text-align: center;
-    position: fixed;
     bottom: 0;
     width: 100%;
     padding: 4px 0;

@@ -1,7 +1,22 @@
-<link rel="stylesheet" href="./assets/produits.css">
-    <title>Tableau d'aliments</title>
-</head>
-<body>
+    <link rel="stylesheet" href="./assets/produits.css">
+    <title>Produits</title>
+
+<a class="retour" href="?page=admin">Retour</a>
+
+<?php
+$dsn = 'mysql:host=localhost;dbname=fast-food';
+$username = 'root';
+$password = '';
+
+try {
+    $pdo = new PDO($dsn, $username, $password);
+} catch (PDOException $e) {
+    die('Erreur de connexion : ' . $e->getMessage());
+}
+
+$query = $pdo->query('SELECT * FROM products');
+$datas = $query->fetchAll(PDO::FETCH_ASSOC);
+?>
 
 <table border="1" class="table">
     <thead>
@@ -17,29 +32,24 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td>1</td>
-            <td>2.50</td>
-            <td>5.00</td>
-            <td>150</td>
-            <td>Pomme</td>
-            <td>100</td>
-            <td>Oui</td>
-            <td><a class="new" href="new.php">NOUVEAU</a></td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>1.75</td>
-            <td>3.50</td>
-            <td>200</td>
-            <td>Carotte</td>
-            <td>75</td>
-            <td>Non</td>
-        </tr>
+        <?php
+            $datas = array(
+                array('id' => 1, 'prix_achat' => 2.50, 'prix_vente' => 5.00, 'calories' => 150, 'nom_aliments' => 'Pomme', 'ventes' => 100, 'visibilite' => 'Oui'),
+                array('id' => 2, 'prix_achat' => 1.75, 'prix_vente' => 3.50, 'calories' => 200, 'nom_aliments' => 'Carotte', 'ventes' => 75, 'visibilite' => 'Non')
+            );
+
+            foreach ($datas as $element) {
+                echo '<tr>';
+                echo '<td>' . $element['id'] . '</td>';
+                echo '<td>' . $element['prix_achat'] . '</td>';
+                echo '<td>' . $element['prix_vente'] . '</td>';
+                echo '<td>' . $element['calories'] . '</td>';
+                echo '<td>' . $element['nom_aliments'] . '</td>';
+                echo '<td>' . $element['ventes'] . '</td>';
+                echo '<td>' . $element['visibilite'] . '</td>';
+                echo '<td><a class="new" href="new.php">NOUVEAU</a></td>';
+                echo '</tr>';
+            }
+        ?>
     </tbody>
 </table>
-
-<a class="retour" href="?page=admin">Retour</a>
-
-</body>
-</html>

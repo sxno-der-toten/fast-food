@@ -15,12 +15,15 @@
     <input type="number" id="price" name="price" required><br>
 
     <label for="image_url">Image_url </label>
-    <input type="text" id="image_url" name="image_url" required><br>
+    <input type="file" id="image_url" name="image_url" required><br>
 
     <label for="purchase_price">Prix d'achat </label>
     <input type="number" id="purchase_price" name="purchase_price" required><br>
 
     <input type="submit" value="Ajouter">
 
-    <a class ='retour' href="?page=admin">Retour</a>
+    <div class='retour-div'>
+        <a class ='retour' href="?page=admin">Retour</a>
+    </div>
+    
 </form>
