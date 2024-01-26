@@ -25,6 +25,5 @@
 
     <input type="submit" value="Ajouter">
 </form>
-
 </body>
 </html>

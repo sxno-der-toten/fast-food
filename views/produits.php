@@ -1,13 +1,4 @@
-<?php
-include 'header.php';
-?>
-
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="produits.css">
+<link rel="stylesheet" href="./assets/produits.css">
     <title>Tableau d'aliments</title>
 </head>
 <body>
@@ -48,9 +39,7 @@ include 'header.php';
     </tbody>
 </table>
 
-<a class="retour" href="admin.php">Retour</a>
-
-<?php include 'footer.php'; ?>
+<a class="retour" href="?page=admin">Retour</a>
 
 </body>
 </html>

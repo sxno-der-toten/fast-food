@@ -1,7 +1,6 @@
 <?php
 
-require 'connection.php';
-include 'register.php';
+require 'register.php';
 
 session_unset();
 session_start();

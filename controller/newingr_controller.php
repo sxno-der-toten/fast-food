@@ -15,19 +15,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->bindParam(':lipides', $lipides);
         $stmt->bindParam(':proteines', $proteines);
         $stmt->execute();
+
+        $calories_lipides = 9;
+        $calories_glucides = 4;
+        $calories_proteines = 4;
+
+        $total_calories = ($lipides * $calories_lipides) + ($glucides * $calories_glucides) + ($proteines * $calories_proteines);
+
+        echo 'Les calories sont de : ' . $total_calories;
     }
 }
-
-$lipides = 20;
-$glucides = 50;
-$proteines = 30;
-
-$calories_lipides = 9;
-$calories_glucides = 4;
-$calories_proteines = 4;
-
-$total_calories = ($lipides * $calories_lipides) + ($glucides * $calories_glucides) + ($proteines * $calories_proteines);
-
-echo "Les calories totales pour $lipides g de lipides, $glucides g de glucides et $proteines g de protéines sont : $total_calories calories.";
 
 require './views/newingr.php';
