@@ -1,33 +1,23 @@
+body {
+    text-align: center; /* Centre le contenu de la page horizontalement */
+}
+
 .title {
     display: flex;
     justify-content: center;
     margin-top: 2%;
-    color:black;
+    color: black;
 }
 
-.commandes {
-    display: inline-block;
-    cursor: pointer;
-    font-weight: 600;
-    border-radius: 3px;
-    padding: 12px 24px;
-    border: 0;
-    border-radius: 18px;
-    color: #fff;
-    background: green;
-    line-height: 1.15;
-    font-size: 16px;
+.buttons-container {
+    margin-top: 20px; /* Espace supplémentaire au-dessus des boutons */
 }
 
-
-.commandes:hover {
-        transition: all .1s ease;
-        box-shadow: 0 0 0 0 #fff, 0 0 0 3px #1de9b6;
-    }
-
-.graphiques {
+.commandes,
+.graphiques,
+.produits,
+.new {
     display: inline-block;
-    outline: none;
     cursor: pointer;
     font-weight: 600;
     border-radius: 18px;
@@ -37,28 +27,14 @@
     background: green;
     line-height: 1.15;
     font-size: 16px;
+    margin-right: 59px;
+    vertical-align: middle; /* Ajustement vertical au centre */
 }
 
-.graphiques:hover {
-        transition: all .1s ease;
-        box-shadow: 0 0 0 0 #fff, 0 0 0 3px #1de9b6;
-    }
-
-.produits {
-    display: inline-block;
-    outline: none;
-    cursor: pointer;
-    font-weight: 600;
-    border-radius: 18px;
-    padding: 12px 24px;
-    border: 0;
-    color: #fff;
-    background: green;
-    line-height: 1.15;
-    font-size: 16px;
+.commandes:hover,
+.graphiques:hover,
+.produits:hover,
+.new:hover {
+    transition: all .1s ease;
+    box-shadow: 0 0 0 0 #fff, 0 0 0 3px #1de9b6;
 }
-
-.produits:hover {
-        transition: all .1s ease;
-        box-shadow: 0 0 0 0 #fff, 0 0 0 3px #1de9b6;
-    }

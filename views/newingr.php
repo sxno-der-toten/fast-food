@@ -1,29 +1,26 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ajouter Ingrédient</title>
-</head>
-<body>
-    <h2>Ajouter un Ingrédient</h2>
-    <form action="" method="post">
-    <label for="name">Nom de l'ingrédient :</label>
+<link rel="stylesheet" type="text/css" href="./assets/new.css">
+<title>Ajouter Produit</title>
+<h2>Ajouter un Produit</h2>
+<form action="" method="post">
+    <label for="name">Nom </label>
     <input type="text" id="name" name="name" required><br>
 
-    <label for="poids">Poids (en g) :</label>
-    <input type="number" id="poids" name="poids" required><br>
+    <label for="category_id">Catégorie </label>
+    <select id="category_id" name="category_id" required>
+        <option value="1">Pizza</option>
+        <option value="2">Burger</option>
+    </select><br>
 
-    <label for="glucides">Glucides :</label>
-    <input type="number" id="glucides" name="glucides" required><br>
+    <label for="price">Prix </label>
+    <input type="number" id="price" name="price" required><br>
 
-    <label for="lipides">Lipides :</label>
-    <input type="number" id="lipides" name="lipides" required><br>
+    <label for="image_url">Image_url </label>
+    <input type="text" id="image_url" name="image_url" required><br>
 
-    <label for="proteines">Proteines :</label>
-    <input type="number" id="proteines" name="proteines" required><br>
+    <label for="purchase_price">Prix d'achat </label>
+    <input type="number" id="purchase_price" name="purchase_price" required><br>
 
     <input type="submit" value="Ajouter">
+
+    <a class ='retour' href="?page=admin">Retour</a>
 </form>
-</body>
-</html>

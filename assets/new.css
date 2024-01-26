@@ -1,4 +1,6 @@
 h2 {
+    display: flex;
+    justify-content: center;
     color: #333;
 }
 
@@ -23,7 +25,7 @@ select {
     padding: 8px;
     margin-bottom: 12px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 40px;
     box-sizing: border-box;
 }
 
@@ -33,11 +35,29 @@ input[type="submit"] {
     cursor: pointer;
 }
 
+.retour {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 50px;
+    padding: 5px 20px;
+    text-decoration: none;
+    border: 1px solid #ccc;
+    border-radius: 40px;
+    background-color: #4caf50;
+    color: #fff;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.retour:hover {
+    background-color: #45a049;
+}
+
 input[type="submit"]:hover {
     background-color: #45a049;
 }
 
-/* Responsive Design */
 @media (max-width: 600px) {
     form {
         max-width: 100%;

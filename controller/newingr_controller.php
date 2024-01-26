@@ -6,23 +6,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $glucides = isset($_POST['glucides']) ? $_POST['glucides'] : "";
     $lipides = isset($_POST['lipides']) ? $_POST['lipides'] : "";
     $proteines = isset($_POST['proteines']) ? $_POST['proteines'] : "";
+    $calories = isset($_POST['calories']) ? $_POST['calories'] : "";
 
     if (!empty($name) && !empty($poids) && !empty($glucides) && !empty($lipides) && !empty($proteines)) {
-        $stmt = $bdd->prepare("INSERT INTO ingredients (name, poids, glucides, lipides, proteines) VALUES (:name, :poids, :glucides, :lipides, :proteines)");
-        $stmt->bindParam(':name', $name);
-        $stmt->bindParam(':poids', $poids);
-        $stmt->bindParam(':glucides', $glucides);
-        $stmt->bindParam(':lipides', $lipides);
-        $stmt->bindParam(':proteines', $proteines);
-        $stmt->execute();
-
         $calories_lipides = 9;
         $calories_glucides = 4;
         $calories_proteines = 4;
 
         $total_calories = ($lipides * $calories_lipides) + ($glucides * $calories_glucides) + ($proteines * $calories_proteines);
 
-        echo 'Les calories sont de : ' . $total_calories;
+        $stmt = $bdd->prepare("INSERT INTO ingredients (name, poids, calories) VALUES (:name, :poids, :calories)");
+        $stmt->bindParam(':name', $name);
+        $stmt->bindParam(':poids', $poids);
+        $stmt->bindParam(':calories', $total_calories);
+        $stmt->execute();
+
+        echo "L'ingrédient a bien été ajouté ! Le nombre total de calories est de " . $total_calories . '.';
     }
 }
 

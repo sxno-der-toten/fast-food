@@ -37,7 +37,6 @@ input[type="submit"]:hover {
     background-color: #45a049;
 }
 
-/* Responsive Design */
 @media (max-width: 600px) {
     form {
         max-width: 100%;
