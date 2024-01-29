@@ -16,7 +16,9 @@ body {
 .commandes,
 .graphiques,
 .produits,
-.new {
+.newingr,
+.newprod,
+.retour {
     display: inline-block;
     cursor: pointer;
     font-weight: 600;
@@ -27,15 +29,17 @@ body {
     background: green;
     line-height: 1.15;
     font-size: 16px;
-    margin-right: 10px; /* Adjusted margin for responsiveness */
-    margin-bottom: 10px; /* Added margin-bottom for better spacing */
+    margin-right: 10px; 
+    margin-bottom: 10px;
     vertical-align: middle;
 }
 
 .commandes:hover,
 .graphiques:hover,
 .produits:hover,
-.new:hover {
+.newingr:hover,
+.newprod:hover,
+.retour:hover {
     transition: all .1s ease;
     box-shadow: 0 0 0 0 #fff, 0 0 0 3px #1de9b6;
 }
@@ -43,11 +47,12 @@ body {
 .content {
     text-align: center;
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 80%;
 }
+
 @media only screen and (max-width: 600px) {
     .content {
         width: 80%;
@@ -56,8 +61,34 @@ body {
     .commandes,
     .graphiques,
     .produits,
-    .new {
-        margin-right: 2px; 
-        margin-bottom: 5px;
+    .newingr,
+    .newprod,
+    .retour {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    .commandes,
+    .graphiques,
+    .produits,
+    .newingr,
+    .newprod,
+    .retour {
+        margin-bottom: 10px;
+    }
+
+    .commandes:last-child,
+    .graphiques:last-child,
+    .produits:last-child,
+    .newingr:last-child,
+    .newprod:last-child,
+    .retour:last-child {
+        margin-bottom: 0;
+    }
+
+    .retour {
+        margin-top: 10px;
     }
 }

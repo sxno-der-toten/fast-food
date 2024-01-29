@@ -1,6 +1,8 @@
-<link rel="stylesheet" type="text/css" href="./assets/new.css">
+<link rel="stylesheet" type="text/css" href="./assets/newprod.css">
 <title>Ajouter Produit</title>
 <h2>Ajouter un Produit</h2>
+
+
 <form action="" method="post" enctype="multipart/form-data">
     <label for="name">Nom </label>
     <input type="text" id="name" name="name" required><br>
@@ -24,4 +26,8 @@
     <input type="number" id="purchase_price" name="purchase_price" required><br>
 
     <input type="submit" value="Ajouter">
+
+    <div class='retour-div'>
+        <a class ='retour' href="?page=admin">Retour</a>
+    </div>
 </form>
