@@ -19,16 +19,16 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
             if ($user && password_verify($password, $user['password'])) {
-                $is_admin = $user['is_admin'];
+                $_SESSION['is_admin'] = $user['is_admin'];
 
                 $_SESSION['nickname'] = $user['nickname'];
                 $_SESSION['email'] = $user['email'];
 
                 if (isset($_SESSION['nickname'])) {
-                    if ($is_admin == 0) {
+                    if ($_SESSION['is_admin'] == 0) {
                         header("Location: index.php");
                         exit();
-                    } elseif ($is_admin == 1) {
+                    } elseif ($_SESSION['is_admin'] == 1) {
                         header("Location: ?page=admin");
                         exit();
                     }
