@@ -18,6 +18,11 @@
         <?php
         if (isset($_SESSION['nickname'])) {
             echo '<a href="?page=logout">' . $_SESSION['nickname'] . '</a>';
+
+            if (isset($_SESSION['is_admin']) && $_SESSION['is_admin'] === 1) {
+                echo '<a href="?page=admin">ADMINISTRATION</a>';
+            }
+
         } else {
             echo '<a href="?page=login">CONNEXION</a>';
             echo '<a href="?page=register">INSCRIPTION</a>';

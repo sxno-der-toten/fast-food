@@ -23,3 +23,13 @@
     background-color: white;
     color: #4CAF50;
 }
+
+.images {
+    display: flex;
+    overflow-x: hidden; /* Masque le défilement horizontal en coupant le contenu qui dépasse */
+}
+
+.images img {
+    width: 100%;
+    height: 93vh;
+}

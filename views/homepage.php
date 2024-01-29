@@ -1,13 +1,15 @@
-<div class="categories">
+<!-- <div class="categories">
     <a href='?page=category&category_id=1' class="category-button">PIZZAS</a>
     <a href='?page=category&category_id=2' class="category-button">BURGERS</a>
+</div> -->
 
-    <?php
-
-    if (isset($_SESSION['is_admin']) &&  $_SESSION['is_admin'] === 1) {
-        echo '<a href="?page=admin" class="category-button">ADMINISTRATION</a>';
-    } else {
-        echo '<br>' . 'Pas admin';
+<style>
+    body {
+    overflow: hidden;
+    height: 100vh;
     }
-    ?>
+</style>
+<div class="images">
+    <a href='?page=category&category_id=1'><img class="pizzas" src="assets/images/pizza_portrait.png" alt="pizzas"></a>
+    <a href='?page=category&category_id=1'><img class="burgers" src="assets/images/burger_portrait.png" alt="burgers"></a>
 </div>
