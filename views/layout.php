@@ -12,7 +12,7 @@
 
 <div class="bandeau">
 <a href= '?page=homepage'><img class="logo" src="assets/images/logo.png" alt="Logo"></a>
-        <a href="panier.php"><button id='panier'>PANIER (<span id='nombreArticle'><?= isset($_SESSION['panier']) ? count($_SESSION['panier']) :  0 ?></span>)</button></a>
+        <a href="?page=panier"><button id='panier'>PANIER (<span id='nombreArticle'><?= isset($_SESSION['panier']) ? count($_SESSION['panier']) :  0 ?></span>)</button></a>
         <div class="background"></div>
 
         <?php

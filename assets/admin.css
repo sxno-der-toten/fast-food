@@ -14,7 +14,6 @@ body {
 }
 
 .commandes,
-.graphiques,
 .produits,
 .newingr,
 .newprod,
@@ -26,7 +25,7 @@ body {
     padding: 12px 24px;
     border: 0;
     color: #fff;
-    background: green;
+    background: #262934;
     line-height: 1.15;
     font-size: 16px;
     margin-right: 10px; 
@@ -35,13 +34,12 @@ body {
 }
 
 .commandes:hover,
-.graphiques:hover,
 .produits:hover,
 .newingr:hover,
 .newprod:hover,
 .retour:hover {
     transition: all .1s ease;
-    box-shadow: 0 0 0 0 #fff, 0 0 0 3px #1de9b6;
+    box-shadow: 0 0 0 0 #fff, 0 0 0 3px black;
 }
 
 .content {
@@ -59,7 +57,6 @@ body {
     }
 
     .commandes,
-    .graphiques,
     .produits,
     .newingr,
     .newprod,
@@ -71,7 +68,6 @@ body {
     }
 
     .commandes,
-    .graphiques,
     .produits,
     .newingr,
     .newprod,
@@ -80,7 +76,6 @@ body {
     }
 
     .commandes:last-child,
-    .graphiques:last-child,
     .produits:last-child,
     .newingr:last-child,
     .newprod:last-child,
