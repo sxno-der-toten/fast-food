@@ -16,3 +16,13 @@
     border-radius: 15px;
     box-shadow: black;
 }
+
+.title {
+    color: #ff9900;
+    font-family: Arial, sans-serif;
+    text-align: center; 
+    margin-top: 35px;
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+}
+
