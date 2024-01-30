@@ -1,0 +1,28 @@
+/* card.css */
+
+.cardContainer {
+    border: 1px solid #ddd;
+    margin: 90px;
+    padding: 5px;
+    text-align: center;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cardContainer h2 {
+    color: #333;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.cardContainer img {
+    max-width: 30%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.cardContainer p {
+    color: #666;
+    font-size: 1em;
+    line-height: 1.4;
+}

@@ -1,7 +1,8 @@
 <?php
 
-$query = "SELECT id FROM categories";
-$response = $bdd->query($query);
-$datas = $response->fetchAll();
+// $query = "SELECT id FROM products";
+// $response = $bdd->query($query);
+// $products = $response->fetchAll();
 
 include 'views/category.php';
+
