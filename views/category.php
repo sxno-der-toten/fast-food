@@ -8,13 +8,19 @@ $response->bindParam(':category_id', $category_id, PDO::PARAM_INT);
 $response->execute();
 
 $products = $response->fetchAll();
+
+$productId = isset($_POST['productId']) ? $_POST['productId'] : null;
+
+echo json_encode($_SESSION['panier']);
+
+var_dump($_SESSION);
 ?>
 
 <link rel="stylesheet" type="text/css" href="assets/category.css">
 
 <div class='retour-div'>
-        <a class ='retour' href="?page=index">Retour</a>
-    </div>
+    <a class ='retour' href="?page=index">Retour</a>
+</div>
 
 <div class="cards-row">
     <?php foreach ($products as $product) { ?>
@@ -22,6 +28,7 @@ $products = $response->fetchAll();
             <h2><?= $product['name'] ?></h2> 
             <img src="<?= $product['image_url'] ?>" alt="<?= $product['name'] ?>">
             <p><?= $product['description'] ?></p>
+            <button onclick="addToCart(<?= $product['id'] ?>)">Ajouter au panier</button>
         </div>
     <?php } ?>
 </div>

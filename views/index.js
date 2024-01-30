@@ -1,54 +1,17 @@
 let nombreArticleElement = document.getElementById('nombreArticle');
 let nombreArticle = 0;
-/*
-let pepperoni = document.getElementById('pepperoni');
-let boeuf = document.getElementById('boeuf');
-let chorizo = document.getElementById('chorizo');
 
-let bigmac = document.getElementById('bigmac');
-let chevremiel = document.getElementById('chevremiel');
-let steak = document.getElementById('steak');
-
-let ajouterAuPanierBtn = document.getElementById('ajouterAuPanierBtn');
-ajouterAuPanierBtn.onclick = function(event) {
-    addPanier();
-};
-
-pepperoni.onclick = function(event) {
-    addPanier();
-}
-
-boeuf.onclick = function(event) {
-    addPanier();
-}
-
-chorizo.onclick = function(event) {
-    addPanier();
-}
-
-bigmac.onclick = function(event) {
-    addPanier();
-}
-
-chevremiel.onclick = function(event) {
-    addPanier();
-}
-
-steak.onclick = function(event) {
-    addPanier();
-}
-*/
-function addPanier(id) {
-    console.log(id);
+function addToCart(id) {
+    console.log('Ajout au panier de l\'article avec l\'ID:', id);
     nombreArticle += 1;
     nombreArticleElement.innerHTML = nombreArticle;
 
-    fetch('panier.php', {
+    fetch('?page=panier', {
         method: 'POST',
         headers: {
-            'Content-Type': 'application/json',
+            'Content-Type': 'application/x-www-form-urlencoded', 
         },
-        body: JSON.stringify({ itemCount: nombreArticle }),
+        body: 'productId=' + encodeURIComponent(id),
     })
     .then(response => {
         if (!response.ok) {
