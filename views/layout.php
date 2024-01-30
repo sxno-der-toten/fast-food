@@ -33,6 +33,18 @@
 
 <?php include 'controller/' . $route . '_controller.php'; ?>
 
-    <!-- <?php include 'assets/include/footer.php'; ?> -->
+<script>
+
+        <?php if (!empty($_SESSION['status'])) { ?>
+            toastr.options = {
+                "positionClass": "toast-top-center",
+            }
+            toastr.<?= $_SESSION['status'] ?>("<?= $_SESSION['message'] ?>")
+        <?php }
+        unset($_SESSION['status']);
+        unset($_SESSION['message']);
+        ?>
+    </script>
+
 </body>
 </html>

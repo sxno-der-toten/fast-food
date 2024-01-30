@@ -1,5 +1,6 @@
     <title>Inscription</title>
-    <link rel="stylesheet" type="text/css" href="/assets/register.css">
+    <link rel="stylesheet" type="text/css" href="./assets/register.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet" />
 
 </head>
 <body>

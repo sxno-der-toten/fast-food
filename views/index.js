@@ -6,12 +6,12 @@ function addToCart(id) {
     nombreArticle += 1;
     nombreArticleElement.innerHTML = nombreArticle;
 
-    fetch('?page=panier', {
+    fetch('controller/panier_controller_fetch.php', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded', 
         },
-        body: 'productId=' + encodeURIComponent(id),
+        body: 'productId=' + encodeURIComponent(id)+'&action=add',
     })
     .then(response => {
         if (!response.ok) {
