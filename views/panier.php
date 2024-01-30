@@ -1,3 +1,5 @@
+<link rel="stylesheet" type="text/css" href="./assets/panier.css">
+
 <body>
 
     <h1>Panier</h1>
@@ -12,8 +14,6 @@
             </li>
         <?php endforeach; ?>
     </ul>
-
-    <button onclick="clearCart(event)">Vider le panier</button>
-    <button onclick="checkout()">Commander</button>
-    
+    <button class='bouttons' onclick="clearCart(event)">Vider le panier</button>
+    <button class='bouttons' onclick="checkout()">Commander</button>
 </body>

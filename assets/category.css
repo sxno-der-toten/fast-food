@@ -69,3 +69,17 @@
     background-color: #dedede; 
     color: #262934;
 }
+
+.add-to-cart-button {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #262934;
+    color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; 
+}
+
+.add-to-cart-button:hover {
+    background-color: #dedede; 
+    color: #262934;
+}

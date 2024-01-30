@@ -23,14 +23,14 @@ var_dump($_SESSION);
 </div>
 
 <div class="cards-row">
-    <?php foreach ($products as $product) { ?>
-        <div class='cardContainer'>
-            <h2><?= $product['name'] ?></h2> 
-            <img src="<?= $product['image_url'] ?>" alt="<?= $product['name'] ?>">
-            <p><?= $product['description'] ?></p>
-            <button onclick="addToCart(<?= $product['id'] ?>)">Ajouter au panier</button>
-        </div>
-    <?php } ?>
+<?php foreach ($products as $product) { ?>
+    <div class='cardContainer'>
+        <h2><?= $product['name'] ?></h2> 
+        <img src="<?= $product['image_url'] ?>" alt="<?= $product['name'] ?>">
+        <p><?= $product['description'] ?></p>
+        <button class="add-to-cart-button" onclick="addToCart(<?= $product['id'] ?>)">Ajouter au panier</button>
+    </div>
+<?php } ?>
 </div>
 
 <a href="?page=category&category_id=1" class='arrow'>

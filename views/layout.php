@@ -33,6 +33,6 @@
 
 <?php include 'controller/' . $route . '_controller.php'; ?>
 
-    <!-- <?php include 'include/footer.php'; ?> -->
+    <!-- <?php include 'assets/include/footer.php'; ?> -->
 </body>
 </html>

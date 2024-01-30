@@ -1,10 +1,16 @@
+.un{
+    display: flex;
+    justify-content: center;
+}
+
 .logout-form {
     background-color: #fff; 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
     border-radius: 8px;
     text-align: center;
-    margin: auto; 
+    margin-top: 250px;
+    /* margin: auto;  */
     max-width: 400px;
 }
 

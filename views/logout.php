@@ -2,6 +2,7 @@
     <title>Déconnexion</title>
 </head>
 <body>
+    <div class="un">
     <div class="logout-form">
         <h2>Confirmation de déconnexion</h2>
         <p>Êtes-vous sûr de vouloir vous déconnecter?</p>
@@ -9,4 +10,5 @@
             <input class="logout" type="submit" name="confirm_logout" value="Oui, je suis sûr">
         </form>
         <a class="non" href="index.php">Annuler</a>
+    </div>
     </div>

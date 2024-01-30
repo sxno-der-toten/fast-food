@@ -1,6 +1,6 @@
 <?php
 session_start();
-require 'include/connection.php';
+require 'assets/include/connection.php';
 
 $availableRoutes = ['homepage', 'category', 'newingr', 'newprod', 'login', 'logout', 'register', 'admin', 'produits', 'graphs','commandes','panier', ' '];
 
